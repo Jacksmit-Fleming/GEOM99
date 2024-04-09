@@ -5,7 +5,7 @@ h1{
     margin-left: 0px !important;
     font-family: Helvetica, sans-serif;
     font-weight: normal;
-    font-size: 30px;
+    font-size: 50px;
     position: relative;
 }
 h1 a{
@@ -19,6 +19,16 @@ h1 a:hover{
 }
 .active-page {
     color: rgb(0, 185, 77);
+}
+
+#landing-Header {
+    font-family: Helvetica, sans-serif;
+    color: #f1fcff;
+    font-size: 55px;
+    font-weight: normal;
+    text-shadow: 3px 3px #000000;
+    padding: 0px;
+
 }
 /* This header contains the nav bar which is fixed*/
 header{
@@ -65,11 +75,7 @@ nav ul li a{
 nav ul li a:hover{
     color: rgb(0, 185, 77);
 }
-/* For the logo we have made it look rounder */
-.logo{
-    border-radius: 50%;
-    padding-left: 10px;
-}
+
 /* This is the side bar which has the responsive navbar pops at right*/
 .sidebar{
     position: fixed;
@@ -152,79 +158,35 @@ svg{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 35px;
 }
-.SA1,.SA2,.SA3,.SA4Raster,.SA4Vector,.GV1,.GV2,.GV3,.GV4,.AI1,.AI2,.AI3Quality,.AI3Quantity{
+
+/* ADD IMAGE TAGS HERE FOR PROPER RESOLUTION */
+.imgs {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-.SA1{
-    max-width: 470px;
-    max-height: 300px;
-}
-/* The following are the picture native resolution which is resized and holds its size while being shrinked*/
-.SA2{
-    max-width: 477px;
-    max-height: 300px;
-}
-.SA3{
-    max-width: 481px;
-    max-height: 300px;
-}
-.SA4Raster{
-    max-width: 486px;
-    max-height: 300px;
-}
-.SA4Vector{
-    max-width: 349px;
-    max-height: 300px;
-}
-/* The following are the picture native resolution which is resized and holds its size while being shrinked*/
-.GV1{
-    max-width: 466px;
-    max-height: 300px;
-}
-.GV2,.GV3{
-    max-width: 463px;
-    max-height: 300px;
-}
-.GV4{
-    max-width: 460px;
-    max-height: 300px;
-}
-/* The following are the picture native resolution which is resized and holds its size while being shrinked*/
-.AI1{
-    max-width: 466px;
-    max-height: 300px;
-}
-.AI2{
-    max-width: 464px;
-    max-height: 300px;
-}
-.AI3Quality,.AI3Quality{
-    max-width: 463px;
-    max-height: 300px;
-}
-/* End Owner: Rahul Saravanabavan */
 
-/* 
-- Owner: Thiluxsaan Puvanendran
-- Date: Nov 22 2023
-*/
+
 body{
     background-color: #b3d8ff;
     margin: 0px;
 }
-/* End Owner: Thiluxsaan Puvanendran */
 
-/*
-- Owner : Jackson Mitchell
-- Date  : Nov 22 (Margins) Nov 30 (Flex box)
-- flex box https://www.w3schools.com/css/css3_flexbox.asp
-*/
 #main-content,#main-content-landing {
+    text-align: center;
     margin: auto;
     margin-top: 150px;
     width: 80%;
+}
+
+#main-content-landing {
+    background-image: url(img/titlebg.jpg);
+    background-position: center;
+    padding-top: 230px;
+    padding-bottom: 160px;
+    margin: 0px;
+    width: 100%;
+    text-align: center;
 }
 
 .section,#section-landing {
@@ -234,23 +196,12 @@ body{
     margin-bottom: 50px;
     flex-direction: column;
 }
-/* End Owner: Jackson Mitchell */
 
-/* 
-- Owner: Thiluxsaan Puvanendran
-- Date: Nov 22 2023
-- Font size and style
---------------------------------
-- Owner: Jackson Mitchell
-- Date Nov 22 2023
-- margins
-*/
-/* these are the h2 and h3 of our every page*/
 h2{
     font-family: Helvetica, sans-serif;
     color: #000000;
     font-weight: normal;
-    font-size: 50px;
+    font-size: 40px;
     margin-top: 40px;
     margin-bottom: 5px;
     text-align: center;
@@ -259,7 +210,7 @@ h3{
     font-family: Helvetica, sans-serif;
     color: #000000;
     font-weight: normal;
-    font-size: 30px;
+    font-size: 25px;
     margin-top: 10px;
     margin-bottom: 15px;
     flex: 0 0 100%;
@@ -271,23 +222,6 @@ p{
     font-weight: normal;
     font-size:18px;
 }
-/* End Owner: Thiluxsaan Puvanendran */
-/* End Owner: Jackson Mitchell */
-
-/* Owner: Tyler Rubini
-   Date: Nov 22 2023 */
-
-/* Heavily modifies the footer. Adds colour to both the font and background, aligns the text to the centre, and adds padding. */
-footer {
-    color: #f1fcff;
-    font-family: sans-serif;
-    background-color: #000;
-    text-align: center;
-    padding: 0px;
-    margin-top: auto;
-    position: relative;
-    padding: 10px;
-}
 
 /* Modifies the h4 class to have a 10px upper margin, colorized text that is bolded, and an 18 point font size */
 h4 {
@@ -298,172 +232,7 @@ h4 {
     font-size: 18px;
 }
 
-/* Sets the colour and font size of the names in the footer. Also sets a 0px bottom margin to simulate a line break without an HTML tag */
-.name {
-    margin-bottom: 0px;
-    color: #f1fcff;
-    font-size: 16px;
-}
 
-/* Sets the colour and font size of the email links in the footer. Also sets a 0px upper margin to simulate a line break without an HTML tag. */
-.email {
-    margin-top: 0px;
-    color: Gray;
-    font-size: 16px;
-}
-
-/* Sets the width and text colour for the columns that make up the footer */
-.column {
-    float: left;
-    width: 20%;
-    color: #f1fcff;
-}
-
-/* Creates a pseudo-element that resets the floats for any elements that come after this part of the footer */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Sets margins and font size for photo captions */
-.caption{ 
-    margin-left: auto;
-    margin-right: auto;
-    font-size:14px;
-}
-
-/* ID used to display treesurveydata.png in its native resolution */
-#db1 {
-    max-width: 842px;
-    max-height: 436px;
-    width: 70%;
-    height: auto;
-}
-
-/* ID used to display treedatabase.png in its native resolution */
-#db2 {
-    max-width: 868px;
-    max-height: 513px;
-    width: 70%;
-    height: auto;
-}
-
-/* ID used to display tylerwebsite.png in its native resolution */
-#wd1 {
-    max-width: 1116px;
-    max-height: 164px;
-    height: auto;
-    width: 85%;
-}
-
-/* ID used to display luxwebsite.png in its native resolution */
-#wd2 {
-    max-width: 1127px;
-    max-height: 87px;
-    height: auto;
-    width: 85%;
-}
-
-/* ID used to display jacksonwebsite.png in its native resolution */
-#wd3 {
-    max-width: 1142px;
-    max-height: 80px;
-    height: auto;
-    width: 85%;
-}
-    
-/* End Owner: Tyler Rubini */
-
-/* Jackson Images
-source https://www.w3schools.com/howto/howto_css_image_center.asp
-*/
-/* These are the pictures which are in native resolution */
-.jimg, #db1, #db2 {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-.jimg {
-    max-width: 600px; 
-    max-height: 400px;
-    width: 50%;
-}
-
-#ac1 {
-    max-width: 1000px;
-    max-height: 625px;
-    width: 70%;
-    height: auto;
-}
-#ac2 {
-    max-width: 800px;
-    max-height: 507px;
-    width: 70%;
-    height: auto;
-}
-#ac3 {
-    max-width: 895px;
-    max-height: 660px;
-    width: 70%;
-    height: auto;
-}
-#gb1 {
-    max-width: 895px;
-    max-height: 660px;
-    width: 70%;
-    height: auto;
-}
-	
-#gb2 {
-    max-width: 1000px;
-    max-height: 649px;
-    width: 70%;
-    height: auto;
-}
-
-/*
-- Owner: Jackson Mitchell
-- Date Dec 4 2023
-- Specific CSS For Landing Page (index)
-- https://www.w3schools.com/html/html_images_background.asp
-- https://www.w3schools.com/cssref/css3_pr_text-shadow.php
-*/
-#main-content-landing {
-    background-image: url('img/titlebg.jpg');
-    background-position: center;
-    padding-top: 230px;
-    padding-bottom: 160px;
-    margin: 0px;
-    width: 100%;
-    text-align: center;
-}
-
-#landing-Header {
-    font-family: Helvetica, sans-serif;
-    color: #f1fcff;
-    font-size: 55px;
-    font-weight: normal;
-    text-shadow: 3px 3px #000000;
-    padding: 0px;
-
-}
-
-#section-landing {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 85%;
-}
-#section-landing p {
-    font-size: 30px;
-}
-/*
-- Owner: Jackson Mitchell
-- Date Nov 30 2023
-- adding break point and css to adjust for small screens
-- https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp
-*/
 @media only screen and (max-width: 550px) {
     h1{
         font-size: 20px;
@@ -491,7 +260,6 @@ source https://www.w3schools.com/howto/howto_css_image_center.asp
         width: 100%;
     }
 }
-
 
 #team {
     display: grid;
