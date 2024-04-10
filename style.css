@@ -164,10 +164,14 @@ svg{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    max-width: inherit;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 
 body{
+    font-family: Helvetica, sans-serif;
     background-color: #b3d8ff;
     margin: 0px;
 }
@@ -176,7 +180,7 @@ body{
     text-align: center;
     margin: auto;
     margin-top: 150px;
-    width: 80%;
+    width: 90%;
 }
 
 #main-content-landing {
@@ -185,22 +189,19 @@ body{
     padding-top: 230px;
     padding-bottom: 160px;
     margin: 0px;
-    width: 100%;
     text-align: center;
 }
 
 .section,#section-landing {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: column;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
 }
 
 h2{
-    font-family: Helvetica, sans-serif;
     color: #000000;
     font-weight: normal;
     font-size: 40px;
@@ -209,31 +210,26 @@ h2{
     text-align: center;
 }
 h3{
-    font-family: Helvetica, sans-serif;
     color: #000000;
     font-weight: normal;
     font-size: 25px;
     margin-top: 10px;
     margin-bottom: 15px;
-    flex: 0 0 100%;
     text-align: center;
 }
-p{ 
-    font-family: Helvetica, sans-serif;
+h4 {
     color: #000000;
     font-weight: normal;
-    font-size:18px;
+    font-size: 22px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    text-align: center;
 }
-
-/* Modifies the h4 class to have a 10px upper margin, colorized text that is bolded, and an 18 point font size */
-h4 {
-    margin-bottom: 0px;
-    margin-top: 10px;
-    color: #f1fcff;
-    font-weight: bold;
-    font-size: 18px;
+p{
+    color: #000000;
+    font-weight: normal;
+    font-size:16px;
 }
-
 
 @media only screen and (max-width: 550px) {
     h1{

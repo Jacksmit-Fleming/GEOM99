@@ -88,18 +88,41 @@
             <h2> Scene Viewer (AGOL) </h2>
             <h3> Overview </h3>
             <p> 
-            Embark on a transformative journey of Spatial Analysis with our team. We specialize in harnessing the transformative capabilities of ArcGIS to 
-            provide cutting-edge spatial analysis solutions. Our dedicated team of GIS experts is committed to assisting 
-            businesses, organizations, and government entities in leveraging location-based data for informed decision-making.           
+            Scene viewer was the most tempting option for showcasing points in 3D from a hosted feature layer that could be updated from field maps or survey123. It had 3d basemaps with 3d building a topology that gave
+            a general feeling of a 3D environment and allowed for different options to showcase how points elevation is display. The four options were "On the Ground", "Relative to the ground", "Relative to the Scene" and "absolute Height".
             </p>
-            <img src="img/SA1.png" alt="Vector Data analysis" class="imgs">
-            <h3> Overview </h3>
+            <h3>Screen Captures showcasing the Elevation settings</h3>
+            <h4>On the Ground</h4>
+            <img src="img/OntheGround.png" alt="image showcasing sample points in scene viewer using the elevation setting On the Ground" class="imgs">
+            <h4>Relative to the ground</h4>
+            <img src="img/RelitivetoGround.png" alt="image showcasing sample points in scene viewer using the elevation setting Relative to the ground" class="imgs">
+            <h4>Relative to the Scene</h4>
+            <img src="img/RelitivetoScene.png" alt="image showcasing sample points in scene viewer using the elevation setting Relative to the Scene" class="imgs">
+            <h4>Absolute Height</h4>
+            <img src="img/AbsoluteHeight.png" alt="image showcasing sample points in scene viewer using the elevation setting Absolute Height" class="imgs">
             <p> 
-            Embark on a transformative journey of Spatial Analysis with our team. We specialize in harnessing the transformative capabilities of ArcGIS to 
-            provide cutting-edge spatial analysis solutions. Our dedicated team of GIS experts is committed to assisting 
-            businesses, organizations, and government entities in leveraging location-based data for informed decision-making.           
+            These four options serve different purposes and for the means to show 2d points all the options end up with the same result expect for absolute does not work without a z value. With The 3D points I used for testing it seamed that 
+            the Absolute height yielded the most accurate results for our field map data. So I tried and added some points and editing the elevation field in the data to see the result. The edited showed no change to the scene view and no matter what changes i 
+            made to the elevation field in the data it would not update in scene viewer. Testing this further trying to use survey123 data or data with a column that contain elevation/z data will not show changes in elevation at all in a 3D scene. The only one that
+            we tested that show elevation was the points collected with field maps.
+            <br><br>
+            The bellow Image shows a comparison between a untouched point and a edited point. One with the a elevation value of 260 and the other 300. Thee 260 being the unchanged and the 300 being the changed one. even with these changes the one set to 300
+            till appears lower than the one at 260. No matter the setting this was always the case.
             </p>
-            <img src="img/SA1.png" alt="Vector Data analysis" class="imgs">
+            <img src="img/pointheightcompare.png" alt="Comparing the Height of the two points in Scene viewer" class="imgs">
+            <h3> Trouble Shooting Setting the Elevation value in Scene Viewer </h3>
+            <p> 
+                The Next step was to take to google and figure out why this was happening. A couple google searches later and a bit of trouble shooting the answer arose. From a ESRI community form question, the answer was found. Setting the variable that is used to 
+                set the elevation value in Scene View is not in the UI and will pull a default no matter what (thats the reason only the field maps worked with z value). Unless you use ArcGIS Online Assistant and edit the geojson make the scene pull a variable value
+                from your feature layer. Although there answer on the form was not 100% accurate and was missing brackets it did lead to the correct answer. Thus we were able to pull elevation data from any Feature layer and display those points in a 3D Scene. 
+            </p>
+            <a href="https://community.esri.com/t5/arcgis-online-questions/attribute-based-altitude-for-point-layer-in-scene/td-p/1277295" target=”_blank”> <h4>Link and Image of ESRI Community Form</h4> </a>
+            <img src="img/esriform.png" alt="Image of answer to problem form the ESRI Community form" class="imgs">
+            <h3> Conclusion on Scene Viewer </h3>
+            <p> 
+            Overall felt like the best solution to our problem that we could find especially after we found the geojson edit workaround. A full walk through of how to edit the geojson using both the current and new beta ArcGIS Online Assistant will be showcased in our 
+            <a href="solutions.html">Solutions</a> section of the website.
+            </p>
         </div>
     </div>
 
