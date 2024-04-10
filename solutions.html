@@ -46,27 +46,46 @@
             <h2> Scene Viewer Elevation Solution </h2>
             <h3> Overview </h3>
             <p> 
-            Embark on a transformative journey of Spatial Analysis with our team. We specialize in harnessing the transformative capabilities of ArcGIS to 
-            provide cutting-edge spatial analysis solutions. Our dedicated team of GIS experts is committed to assisting 
-            businesses, organizations, and government entities in leveraging location-based data for informed decision-making.           
+            For The process of showcasing how to display points in 3D using Scene Viewer and pulling the elevation data from a column within the point data, I will be using a sample of points taken form Lidar Data used in Remote Sensing II Project 3. 
+            I wont be going over Fully how I got the data into ArcGIS Online and focusing on getting it into a Scene and making it pull the elevation value in the scene from the desired column.
             </p>
-            <img src="img/SA1.png" alt="Vector Data analysis" class="imgs">
-            <h3> Overview </h3>
+            <h3> Step 1 - Adding your data to a new Scene </h3>
             <p> 
-            Embark on a transformative journey of Spatial Analysis with our team. We specialize in harnessing the transformative capabilities of ArcGIS to 
-            provide cutting-edge spatial analysis solutions. Our dedicated team of GIS experts is committed to assisting 
-            businesses, organizations, and government entities in leveraging location-based data for informed decision-making.           
+            This is quite straight forward first open Scene Viewer from ArcGIS Online Main page Then following the following steps; Select create new scene. In the top left corner under the hamburger button select "browse layer" to see they layers on 
+            ArcGIS online you can add to the scene. find the layer you want to add then click the "Add +" button. This is the first step of adding your layer to Scene viewer. The Following images also show you this process in order.
             </p>
-            <img src="img/SA1.png" alt="Vector Data analysis" class="imgs">
+            <img src="img/SolutionPart1.png" alt="Vector Data analysis" class="imgs">
+            <h4>Note: that the last image the Layer Style was changed to match future images and that if there are to many point in your feature layer it will not render when you first add your points in.</h4>
         </div>
         <div class="section">
-            <h2> Conclusion </h2>
+            <h2> Part 2 - Setting your Elevation </h2>
             <p> 
-            Embark on a transformative journey of Spatial Analysis with our team. We specialize in harnessing the transformative capabilities of ArcGIS to 
-            provide cutting-edge spatial analysis solutions. Our dedicated team of GIS experts is committed to assisting 
-            businesses, organizations, and government entities in leveraging location-based data for informed decision-making.           
+            First step before this is to save your Scene so that it generates a item that you can view in ArcGIS Assistant, next take a look at your Layer Style (2D and 3D both work) just to see the elevation mode and test to see if your 
+            layer has had its elevation set in the background. If you see no change that means the elevation value has not be set automatically for the feature layer and must be done manually. For my feature class done of the elevation modes work, 
+            hence the json for the feature layer inside the Scene Viewer item must be changed. To do this use ArcGIS assistant this website allows you to edit the json for your items in ArcGIS Online. The website can be found at the following link 
+            There are currently two versions of the website the current one and one that is in beta: ArcGIS Assistant and ArcGIS Assistant New.Once on one of the website log in and navigate your way to your Scenes Json Then Specifically the one with the header "Data".
             </p>
             <img src="img/SA1.png" alt="Vector Data analysis" class="imgs">
+
+            <p>Once there navigate to the item named "elevationInfo".</p>
+            <img src="img/SA1.png" alt="Vector Data analysis" class="imgs">
+
+            <p>This is where we will tell the scene what variable to pull the elevation data from. Now make your elevationInfo match the following one with z being your z value field from your feature layer and mode 
+                being your mode of choice from the four options from the UI in Scene Viewer ("onTheGround","relativeToGround","relativeToScene","absoluteHeight").
+            </p>
+            
+            <p>"elevationInfo": { "featureExpressionInfo": {"expression": "$feature.z"},"mode": "relativeToGround","offset": 0,"unit": "meter" }</p>
+            <img src="img/SA1.png" alt="Vector Data analysis" class="imgs">
+            <p>
+            One this has been changed save the json and head back to your scene and refresh the window. Now the elevation mode should be set to custom and your points elevation should now reflect that of the column you set it to.
+            </p>
+            <img src="img/SA1.png" alt="Vector Data analysis" class="imgs">
+            <h2> Conclusion </h2>
+            <p> 
+            Overall this solution does work and fits as a fix to our Problem statement but does have a lot of flaws associated with it. As any major changes to the symbology (2D > 3D or setting different visualization of Variables or different 
+            elevation mode) will result in having to repeat the process of editing the json or editing it in general. Also large amounts of points can cause issues with Scene viewer. Lastly scene viewer does not always working on all machines (google chrome in the labs).
+            In conclusion we did end up finding a solution for collecting point data and displaying it in a 3D environment as well as showcasing an important piece of information about the elevation value in Scene viewer.
+            </p>
         </div
     </div>
 
