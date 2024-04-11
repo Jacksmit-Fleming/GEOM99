@@ -73,8 +73,9 @@
             </p>
             <img src="img/SolutionPart2.png" alt="4 part image showing how to navigate ArcGIS online assistant to edit the json" class="imgs">
 
-            <p>Once there click on edit Json then navigate to the item named "elevationInfo". This is where we will tell the scene what variable to pull the elevation data from. Now make your elevationInfo match the following one with z being your z value field from your feature layer and mode 
-                being your mode of choice from the four options from the UI in Scene Viewer ("onTheGround","relativeToGround","relativeToScene","absoluteHeight").
+            <p>
+                Once there click on edit Json then navigate to the item named "elevationInfo". This is where we will tell the scene what variable to pull the elevation data from. Now make your elevationInfo match the following one with z being your z 
+                value field from your feature layer and mode being your mode of choice from the four options from the UI in Scene Viewer ("onTheGround", "relativeToGround", "relativeToScene", "absoluteHeight").
             </p>
             <p>"elevationInfo": { "featureExpressionInfo": {"expression": "$feature.z"},"mode": "relativeToGround","offset": 0,"unit": "meter" }</p>
             <img src="img/SolutionPart3.png" alt="2 part image showing how to edit the elevationInfo in both the new and old ArcGIS online assistant" class="imgs">

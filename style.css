@@ -44,7 +44,7 @@ header{
 /* The Nav Bar has our subsequent pages which also has our */
 nav{
     display: flex;
-    background-color: #000;
+    background-color: #112d55;
     width: 100%;
     position: fixed;
     margin: 0;
@@ -171,7 +171,7 @@ svg{
 
 body{
     font-family: Helvetica, sans-serif;
-    background-color: #b3d8ff;
+    background-color: #b3c5d7;
     margin: 0px;
 }
 
@@ -235,7 +235,7 @@ p{
 
 @media only screen and (max-width: 550px) {
     h1{
-        font-size: 20px;
+        font-size: 50px;
     }
 
     #main-content-landing {
