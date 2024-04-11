@@ -284,3 +284,7 @@ iframe {
     height: 900px;
     
 }
+
+.lux-lists li{
+	padding: 18px;
+}
