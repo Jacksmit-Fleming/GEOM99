@@ -290,6 +290,8 @@ iframe {
 	font-size:18px;
 	font-family: Helvetica, sans-serif;
 	list-style-type: circle;
+	display:inline-block;
+	vertical-align: middle;
 	
 }
 
