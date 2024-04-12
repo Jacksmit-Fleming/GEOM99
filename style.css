@@ -1,6 +1,5 @@
 /* The stylesheet for the group project for GEOM 99 based on the one from GEOM 101*/
 
-/* Our h1 tag is the landing page for our website so that we have hover and a tag for it*/
 h1{
     margin-left: 0px !important;
     font-family: Helvetica, sans-serif;
@@ -192,7 +191,7 @@ body{
     width: auto;
 }
 
-.section,#section-landing {
+.section,.section-landing {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
@@ -231,6 +230,11 @@ p{
     color: #000000;
     font-weight: normal;
     font-size:18px;
+}
+
+i{
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 @media only screen and (max-width: 550px) {
@@ -286,7 +290,6 @@ iframe {
     max-width: 1200px;
     height: 100%;
     height: 900px;
-    
 }
 
 
