@@ -264,14 +264,18 @@ p{
 #team {
     display: grid;
     grid-auto-flow: column;
-    justify-content: center;
+    align-items: start;
+    justify-items: center;
 }
 
 .team-section {
+    
+    align-items: center;
     margin-top: 50px;
     margin-bottom: 50px;
     padding-left: 10px;
     padding-right: 10px;
+    max-width: 500px;
 }
 
 iframe {
