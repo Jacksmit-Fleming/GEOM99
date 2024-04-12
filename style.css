@@ -285,9 +285,6 @@ iframe {
     
 }
 
-.lux-lists li{
-	padding: 18px;
-}
 
 .lux-lists {
 	font-size:18px;
@@ -296,31 +293,9 @@ iframe {
 	
 }
 
-#gb1 {
-    max-width: 200px;
-    max-height: 432px;
-    width: 70%;
-    height: auto;
-}
-	
-#gb2 {
-    max-width: 200px;
-    max-height: 432px;
-    width: 70%;
-    height: auto;
+.lux-lists li{
+	padding: 18px;
 }
 
-#gb3 {
-    max-width: 200px;
-    max-height: 432px;
-    width: 70%;
-    height: auto;
-}
-	
-#gb4 {
-    max-width: 200px;
-    max-height: 432px;
-    width: 70%;
-    height: auto;
-}
+
 
